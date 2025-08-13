@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+}
+
+html,
+body {
+    min-height: 100vh;
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+.container {
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-section {
+    margin: -10px auto 0;
+    text-align: center;
+    width: 60%;
+    padding: 0 6rem;
+}
+
+.title-section .title {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.title-section .subtitle {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 25px;
+    color: silver;
+    font-weight: 350;
+}
+
+.upload-section {
+    margin: 2.3rem auto;
+    height: 340px;
+    width: 730px;
+    border-radius: 20px;
+    border: 2px dashed #334155;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+        border-color: #93c5fd;
+    }
+}
+
+.upload-section .icon {
+    margin-top: 40px;
+}
+
+.upload-section .icon i {
+    font-size: 85px;
+    color: #f8fafc;
+}
+
+.upload-section .upload-content {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.upload-section .upload-text {
+    margin-top: 30px;
+}
+
+.upload-text h1 {
+    font-weight: 300;
+    font-size: 27px;
+}
+
+.upload-text p {
+    margin: 5px 0 40px;
+    font-size: 17px;
+    opacity: 0.7;
+}
+
+.upload-text span {
+    background: rgba(59, 130, 246, 0.1);
+    color: #93c5fd;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 4px;
+}
+
+.buttons-section {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons-section .btn {
+    border: none;
+    outline: none;
+    background: #93c5fd;
+    padding: 10px 40px;
+    border-radius: 4px;
+    font-size: 17.5px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.buttons-section .btn:last-child {
+    background: transparent;
+    border: 1.2px solid #93c5fd;
+    color: white;
+}
+
+/* Image Preview Styling */
+.image-preview {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.image-preview img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
