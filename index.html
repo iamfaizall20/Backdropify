@@ -15,18 +15,21 @@
 <body>
     <div class="container">
 
+        <!-- Home Header -->
         <div class="title-section">
             <h1 class="title">Smart Background Eraser</h1>
             <p class="subtitle">Remove backgrounds from your images instantly using AI technology. Upload any image and
                 get professional results in seconds.</p>
         </div>
 
+        <!-- File Upload & Remove BG Preview Sections -->
         <div class="upload-section">
             <!-- For Uploaded Image Preview -->
             <div class="image-preview" style="display: none;">
                 <img src="dummy-image.jpeg">
             </div>
 
+            <!-- For Choosing a Image File -->
             <input type="file" id="fileInput" style="display: none;">
             <label for="fileInput" class="upload-content" style="display: block;">
                 <div class="icon">
@@ -38,7 +41,30 @@
                     <span>PNG, JPG, JPEG upto 10MB</span>
                 </div>
             </label>
+
+            <!-- Old & New Image Preview Sections -->
+            <div class="process-section" style="display: none;">
+                <div class="before-section">
+                    <span class="before-text">before</span>
+                    <div class="before-image">
+                        <img src="dummy-image.jpeg">
+                    </div>
+                </div>
+                <div class="after-section">
+                    <span class="after-text">after</span>
+                    <div class="after-image">
+                        <!-- Pre Loader -->
+                        <div class="loader" style="display: flex;">
+                            <div class="processing"></div>
+                            <span class="loader-text">processing</span>
+                        </div>
+                        <img src="" style="display: none;">
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Home Footer -->
         <div class="buttons-section">
             <button class="btn">Remove Bg</button>
             <button class="btn">Download</button>

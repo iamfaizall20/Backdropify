@@ -138,3 +138,80 @@ body {
     width: 100%;
     object-fit: contain;
 }
+
+/* Before & After Image Preview */
+.process-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+
+.before-section,
+.after-section {
+    position: relative;
+    width: 45%;
+}
+
+.before-text,
+.after-text {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    background: #0f172a;
+    color: #93c5fd;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.before-image,
+.after-image {
+    height: 100%;
+    width: 100%;
+
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+}
+
+.after-image,
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.after-image .loader {
+    flex-direction: column;
+}
+
+.loader .processing {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2.5px solid white;
+    border-top-color: #0f172a;
+    border-right-color: #0f172a;
+    animation: spin 1s linear infinite;
+}
+
+.loader .loader-text {
+    font-size: 17.5px;
+    margin-top: 15px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
