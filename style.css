@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'DM Sans';
+    font-family: 'DM Sans', sans-serif;
 }
 
 html,
@@ -21,52 +21,54 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .title-section {
-    margin: -10px auto 0;
+    margin: 0 auto;
     text-align: center;
-    width: 60%;
-    padding: 0 6rem;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 2rem;
 }
 
 .title-section .title {
-    font-size: 45px;
+    font-size: clamp(2rem, 5vw, 2.8rem);
     font-weight: 400;
 }
 
 .title-section .subtitle {
-    font-size: 18px;
-    margin-top: 15px;
-    line-height: 25px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-top: 0.75rem;
+    line-height: 1.5;
     color: silver;
     font-weight: 350;
 }
 
 .upload-section {
-    margin: 2.3rem auto;
-    height: 340px;
-    width: 730px;
-    border-radius: 20px;
+    margin: 2rem auto;
+    width: min(90%, 800px);
+    height: clamp(280px, 40vw, 360px);
+    border-radius: 1rem;
     border: 2px dashed #334155;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: border-color 0.2s ease;
+}
 
-    &:hover {
-        border-color: #93c5fd;
-    }
+.upload-section:hover {
+    border-color: #93c5fd;
 }
 
 .upload-section .icon {
-    margin-top: 40px;
+    margin-top: 3rem;
 }
 
 .upload-section .icon i {
-    font-size: 85px;
+    font-size: clamp(3rem, 8vw, 6rem);
     color: #f8fafc;
 }
 
@@ -78,17 +80,17 @@ body {
 }
 
 .upload-section .upload-text {
-    margin-top: 30px;
+    margin-top: 2rem;
 }
 
 .upload-text h1 {
     font-weight: 300;
-    font-size: 27px;
+    font-size: clamp(1.5rem, 3.5vw, 1.8rem);
 }
 
 .upload-text p {
-    margin: 5px 0 40px;
-    font-size: 17px;
+    margin: 0.5rem 0 2rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     opacity: 0.7;
 }
 
@@ -96,34 +98,37 @@ body {
     background: rgba(59, 130, 246, 0.1);
     color: #93c5fd;
     font-weight: 500;
-    padding: 10px 20px;
-    font-size: 17px;
-    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    border-radius: 0.25rem;
 }
 
 .buttons-section {
     text-align: center;
     width: 100%;
+    max-width: 600px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 1rem;
+    padding: 0 1rem;
 }
 
 .buttons-section .btn {
     border: none;
     outline: none;
     background: #93c5fd;
-    padding: 10px 40px;
-    border-radius: 4px;
-    font-size: 17.5px;
+    padding: 0.6rem 2rem;
+    border-radius: 0.25rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-weight: 550;
     cursor: pointer;
     color: black;
+}
 
-    &:disabled {
-        cursor: not-allowed;
-        opacity: 0.7;
-    }
+.buttons-section .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 
 .buttons-section .btn:last-child {
@@ -136,7 +141,7 @@ body {
 .image-preview {
     height: 100%;
     width: 100%;
-    padding: 10px;
+    padding: 0.5rem;
 }
 
 .image-preview img {
@@ -149,28 +154,30 @@ body {
 .process-section {
     height: 100%;
     width: 100%;
+    max-width: 900px;
     display: flex;
-    gap: 30px;
-    padding: 20px 30px;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1rem;
     justify-content: space-between;
 }
 
 .before-section,
 .after-section {
     position: relative;
-    width: 45%;
+    width: 50%;
 }
 
 .before-text,
 .after-text {
     position: absolute;
-    left: 2%;
-    top: 2%;
+    left: 2rem;
+    top: 0.5rem;
     background: #0f172a;
     color: #93c5fd;
-    padding: 7px 16px;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
 }
 
 .after-text {
@@ -183,13 +190,14 @@ body {
 .after-image {
     height: 100%;
     width: 100%;
+}
 
-    & img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        border-radius: 10px;
-    }
+.before-image img,
+.after-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
 }
 
 .after-image,
@@ -204,8 +212,8 @@ body {
 }
 
 .loader .processing {
-    height: 50px;
-    width: 50px;
+    height: clamp(2rem, 5vw, 3rem);
+    width: clamp(2rem, 5vw, 3rem);
     border-radius: 50%;
     border: 2.5px solid white;
     border-top-color: #0f172a;
@@ -214,8 +222,8 @@ body {
 }
 
 .loader .loader-text {
-    font-size: 17.5px;
-    margin-top: 15px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin-top: 0.75rem;
 }
 
 @keyframes spin {
@@ -225,5 +233,61 @@ body {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .title-section {
+        padding: 0 1rem;
+    }
+
+    .upload-section {
+        height: clamp(240px, 50vw, 300px);
+    }
+
+    .process-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .before-section,
+    .after-section {
+        width: 100%;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-section .title {
+        font-size: clamp(1.8rem, 6vw, 2.2rem);
+    }
+
+    .title-section .subtitle {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
+    .upload-section .icon i {
+        font-size: clamp(2.5rem, 7vw, 3.5rem);
+    }
+
+    .upload-text h1 {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+    }
+
+    .upload-text p,
+    .upload-text span {
+        font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+    }
+
+    .buttons-section .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+    }
+
+    .before-text,
+    .after-text {
+        font-size: clamp(0.7rem, 2vw, 0.85rem);
+        padding: 0.3rem 0.6rem;
     }
 }
