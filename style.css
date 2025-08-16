@@ -227,3 +227,96 @@ body {
         transform: rotate(360deg);
     }
 }
+
+/* Large Desktops */
+@media (min-width: 1400px) {
+    .title-section .title {
+        font-size: 55px;
+    }
+
+    .title-section .subtitle {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 18px;
+    }
+
+    .upload-section {
+        height: 340px;
+        width: 760px;
+    }
+
+    .upload-section .icon {
+        font-size: 90px;
+    }
+
+    .upload-text h1 {
+        font-size: 30px;
+    }
+
+    .upload-text p {
+        font-size: 18.5px;
+        margin: 5px 0 30px;
+    }
+
+    .buttons-section .btn {
+        font-size: 18px;
+        padding: 12px 42px;
+    }
+
+    .loader .processing {
+        height: 60px;
+        width: 60px;
+    }
+
+    .loader .loader-text {
+        font-size: 18px;
+    }
+}
+
+/* Tablets / iPads*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .title-section {
+        width: 85%;
+        margin: -50px auto 0;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    .title-section {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .title-section .title {
+        font-size: 33px;
+    }
+
+    .title-section .subtitle {
+        font-size: 16.5px;
+        line-height: 20px;
+    }
+
+    .upload-section {
+        width: 370px;
+        min-height: 340px;
+        max-height: 680px;
+    }
+
+    .process-section {
+        padding: 10px;
+    }
+
+    .upload-section .icon i {
+        font-size: 60px;
+    }
+
+    .upload-text {
+        margin-top: 45px;
+    }
+
+    .upload-text h1 {
+        font-size: 25px;
+    }
+
+}
